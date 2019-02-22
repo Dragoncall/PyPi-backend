@@ -65,6 +65,9 @@ class SongRepository:
     def pause(self):
         self.media_list_player.pause()
 
+    def set_pause(self, do_pause):
+        self.media_list_player.set_pause(do_pause)
+
     def length_song(self, index):
         return self.media_list.item_at_index(index).get_duration()
 
@@ -90,26 +93,26 @@ def get_length_song():
 
 
 # TODO: this does not work for some alien reason
-@app.route('/pause', methods=['POST'])
+@app.route('/songs/pause', methods=['POST'])
 def pause_song():
     repo = SongRepository.get_instance()
     repo.pause()
     return jsonify({'success': True, 'playing': repo.is_playing()})
 
 
-@app.route('/next', methods=['POST'])
+@app.route('/songs/next', methods=['POST'])
 def play_next():
     SongRepository.get_instance().next_song()
     return jsonify({'success': True})
 
 
-@app.route('/previous', methods=['POST'])
+@app.route('/songs/previous', methods=['POST'])
 def play_previous():
     SongRepository.get_instance().previous_song()
     return jsonify({'success': True})
 
 
-@app.route('/playsong', methods=['POST'])
+@app.route('/songs/play', methods=['POST'])
 def play_at_index():
     index = request.json['index']
     SongRepository.get_instance().set_index(index)
@@ -117,7 +120,7 @@ def play_at_index():
 
 
 # Song should be of the format: {url:..., image:..., title: ..., length: ...}
-@app.route('/addsong', methods=['POST'])
+@app.route('/songs/add', methods=['POST'])
 def add_song():
     song = request.json['song']
     SongRepository.get_instance().add_songs(song)
@@ -139,14 +142,14 @@ def all_songs():
     return jsonify({"index": repo.current_song(), "songs": {i: value for i, value in enumerate(repo.get_songs())}})
 
 
-@app.route('/reset', methods=['POST'])
+@app.route('/songs/reset', methods=['POST'])
 def reset():
     repo = SongRepository.get_instance()
     repo.reset()
     return jsonify({"index": repo.current_song(), "songs": {i: value for i, value in enumerate(repo.get_songs())}})
 
 
-@app.route('/addsong/soundcloud', methods=['POST'])
+@app.route('/songs/add/soundcloud', methods=['POST'])
 def add_soundcloud_song():
     result_song = {}
     track = client.get('/resolve', url=request.json['song'])
@@ -161,7 +164,7 @@ def add_soundcloud_song():
     return jsonify(result_song)
 
 
-@app.route('/search-soundcloud', methods=['GET'])
+@app.route('/songs/search-soundcloud', methods=['GET'])
 def soundcloudSearch():
     query = request.args.get('query', default='test', type=str)
     tracks = client.get('/tracks', q=query, limit=20)
@@ -173,7 +176,7 @@ def soundcloudSearch():
     return jsonify(track_list)
 
 
-@app.route('/search-youtube', methods=['GET'])
+@app.route('/songs/search-youtube', methods=['GET'])
 def youtubeSearch():
     query = request.args.get('query', default='test', type=str)
 
