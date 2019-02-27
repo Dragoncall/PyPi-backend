@@ -18,4 +18,5 @@ def add_cors_headers(response):
 if __name__ == '__main__':
     from song_endpoint.song_endpoints_v2 import *
     from state_endpoint.state_endpoint import *
+    from environment_endpoint import *
     app.run(host='0.0.0.0', debug=True)
