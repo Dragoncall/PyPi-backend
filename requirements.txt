@@ -105,7 +105,7 @@ MarkupSafe == 1.1.0
 # venv/lib/python3.6/site-packages/werkzeug/utils.py: 365,371,628
 # venv/lib/python3.6/site-packages/werkzeug/wrappers.py: 48,58,271,302,1447,1534
 # venv/lib/python3.6/site-packages/werkzeug/wsgi.py: 53,65,569
-Werkzeug == 0.14.1
+Werkzeug == 0.15.3
 
 # venv/lib/python3.6/site-packages/bs4/builder/__init__.py: 7
 # venv/lib/python3.6/site-packages/bs4/builder/_html5lib.py: 25,104,128,144
