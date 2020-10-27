@@ -156,7 +156,7 @@ colorama == 0.4.1
 
 # venv/lib/python3.6/site-packages/requests/help.py: 23
 # venv/lib/python3.6/site-packages/urllib3/contrib/pyopenssl.py: 47,48,49,137
-cryptography == 2.6
+cryptography == 3.2
 
 # venv/lib/python3.6/site-packages/pip/_vendor/html5lib/_trie/datrie.py: 3
 datrie == 0.7.1
