@@ -334,7 +334,7 @@ numpy == 1.15.2
 # venv/lib/python3.6/site-packages/pip/vcs/mercurial.py: 8,9,10
 # venv/lib/python3.6/site-packages/pip/vcs/subversion.py: 12,166
 # venv/lib/python3.6/site-packages/pip/wheel.py: 33,36,37,38,39,40,41,42,552
-pip == 19.0.3
+pip == 19.2
 
 # venv/lib/python3.6/site-packages/pip/_vendor/requests/packages/urllib3/contrib/pyopenssl.py: 56
 pyasn1 == 0.4.5
