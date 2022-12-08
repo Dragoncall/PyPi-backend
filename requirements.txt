@@ -139,7 +139,7 @@ bio_utils == 1.1.0
 # venv/lib/python3.6/site-packages/certifi/__main__.py: 1
 # venv/lib/python3.6/site-packages/pip/_vendor/requests/certs.py: 17
 # venv/lib/python3.6/site-packages/requests/certs.py: 15
-certifi == 2018.11.29
+certifi == 2022.12.7
 
 # venv/lib/python3.6/site-packages/bs4/dammit.py: 32
 # venv/lib/python3.6/site-packages/chardet/cli/chardetect.py: 21,22,23
