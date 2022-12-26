@@ -498,7 +498,7 @@ watchdog == 0.9.0
 # venv/lib/python3.6/site-packages/wheel/__main__.py: 14
 # venv/lib/python3.6/site-packages/wheel/egg2wheel.py: 13,14
 # venv/lib/python3.6/site-packages/wheel/wininst2wheel.py: 12,13
-wheel == 0.31.1
+wheel == 0.38.1
 
 # venv/lib/python3.6/site-packages/wheel/util.py: 149,153
 xdg == 3.0.2
