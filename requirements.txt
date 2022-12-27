@@ -421,7 +421,7 @@ requests == 2.21.0
 # venv/lib/python3.6/site-packages/wheel/metadata.py: 11
 # venv/lib/python3.6/site-packages/wheel/tool/__init__.py: 20,242,243
 # venv/lib/python3.6/site-packages/wheel/util.py: 164
-setuptools == 28.8.0
+setuptools == 65.5.1
 
 # venv/lib/python3.6/site-packages/itsdangerous.py: 38
 # venv/lib/python3.6/site-packages/requests/compat.py: 29
